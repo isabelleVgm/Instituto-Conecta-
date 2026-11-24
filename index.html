@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App Conecta | Gestão para o seu negócio em 5 minutos por dia</title>
+  <meta name="description" content="App gratuito do Instituto Conecta: aprenda a cuidar do seu negócio em 5 minutos por dia, no celular, com trilhas por ofício, ofensiva diária e ranking.">
+  <meta name="theme-color" content="#042550">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Instituto Conecta">
+  <meta property="og:title" content="App Conecta | 5 minutos por dia para cuidar do seu negócio">
+  <meta property="og:description" content="Aprenda a cuidar do seu negócio em 5 minutos por dia, de graça, no seu celular, entre um cliente e outro.">
+  <meta property="og:image" content="assets/img/icone-512.png">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/icone-192.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="index.html" aria-label="Instituto Conecta, página inicial">
+        <img src="assets/img/logo-horizontal.png" alt="Instituto Conecta" width="128" height="36">
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Menu principal">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#como-funciona">Como funciona</a></li>
+          <li><a class="site-nav__link" href="#trilhas">Trilhas</a></li>
+          <li><a class="site-nav__link" href="#voluntarios">Voluntários</a></li>
+          <li><a class="site-nav__link" href="#empresas">Empresas</a></li>
+          <li><a class="site-nav__link" href="#sobre">Sobre</a></li>
+        </ul>
+        <a class="btn btn--primary btn--block site-nav__cta" href="licao.html">Experimentar grátis</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="streak-chip streak-chip--ativa" href="licao.html" data-streak-chip hidden>
+          <span aria-hidden="true">🔥</span>
+          <span data-streak-value>0</span>
+          <span class="visually-hidden">dias de ofensiva</span>
+        </a>
+        <a class="btn btn--primary btn--sm site-header__cta" href="licao.html">Experimentar grátis</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu" hidden>
+          <span class="menu-toggle__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="section-label">Educação prática · 5 min por dia</span>
+          <h1 class="hero__title" id="hero-title">Aprenda a cuidar do seu negócio em <span class="hero__highlight">5 minutos por dia</span>, de graça, no seu celular, entre um cliente e outro.</h1>
+          <ul class="pill-list hero__pills" aria-label="Destaques do app">
+            <li class="pill">5 minutos</li>
+            <li class="pill">Gratuito</li>
+            <li class="pill">Por ofício</li>
+            <li class="pill">Gamificado</li>
+          </ul>
+          <div class="btn-row hero__ctas">
+            <a class="btn btn--primary btn--lg" href="licao.html">Fazer minha primeira lição</a>
+            <a class="btn btn--secondary btn--lg" href="#voluntarios">Quero ser voluntário</a>
+          </div>
+          <p class="hero__note">O app ainda está em desenvolvimento. Você já pode experimentar uma lição aqui no site.</p>
+        </div>
+
+        <!-- Mockup do celular em HTML/CSS -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__shape hero__shape--a"></div>
+          <div class="hero__shape hero__shape--b"></div>
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="phone__top">
+                <div>
+                  <p class="phone__hello">Olá, empreendedor!</p>
+                  <p class="phone__heading">Suas trilhas</p>
+                </div>
+                <span class="streak-chip streak-chip--ativa">🔥 3</span>
+              </div>
+              <div class="phone-card">
+                <span class="phone-card__emoji">✂️</span>
+                <div class="phone-card__body">
+                  <p class="phone-card__title">Barbearia</p>
+                  <div class="progress"><span class="progress__fill progress__fill--60"></span></div>
+                </div>
+              </div>
+              <div class="phone-card">
+                <span class="phone-card__emoji">🎂</span>
+                <div class="phone-card__body">
+                  <p class="phone-card__title">Confeitaria</p>
+                  <div class="progress"><span class="progress__fill progress__fill--30"></span></div>
+                </div>
+              </div>
+              <div class="phone-card">
+                <span class="phone-card__emoji">🥖</span>
+                <div class="phone-card__body">
+                  <p class="phone-card__title">Padaria</p>
+                  <div class="progress"><span class="progress__fill progress__fill--15"></span></div>
+                </div>
+              </div>
+              <span class="btn btn--primary btn--block phone__cta">Lição do dia →</span>
+            </div>
+          </div>
+          <div class="hero__seal">5 min/<br>dia</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROBLEMA ================= -->
+    <section class="section section--claro" id="problema" aria-labelledby="problema-title">
+      <div class="container">
+        <div class="section__head">
+          <span class="section-label">O desafio</span>
+          <h2 class="section-title" id="problema-title">Por que a capacitação precisa mudar?</h2>
+          <p class="section__lead">Conhecimento abre portas. O Instituto Conecta oferece ferramentas para que você possa abrir as suas.</p>
+        </div>
+
+        <ul class="pillars" aria-label="Três pilares do problema">
+          <li class="card pillar">
+            <span class="icon-box">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <h3 class="pillar__title">Tempo</h3>
+            <p class="card__text">Jornadas longas dificultam cursos tradicionais.</p>
+          </li>
+          <li class="card pillar">
+            <span class="icon-box">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg>
+            </span>
+            <h3 class="pillar__title">Acesso</h3>
+            <p class="card__text">Uso concentrado no celular e dados limitados.</p>
+          </li>
+          <li class="card pillar">
+            <span class="icon-box">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M6 16v-4"/><path d="M11 16V8"/><path d="M16 16v-6"/><path d="M20 5l-3 3"/></svg>
+            </span>
+            <h3 class="pillar__title">Gestão</h3>
+            <p class="card__text">Dificuldade com precificação, caixa e divulgação.</p>
+          </li>
+        </ul>
+
+        <ul class="stats" aria-label="Números do problema">
+          <li class="stat">
+            <p class="stat__number">45h</p>
+            <p class="stat__unit">semanais</p>
+            <p class="stat__text">Jornada média de trabalhadores por conta própria no 1º trimestre de 2026, a maior do país.</p>
+            <span class="source">Fonte: Agência Brasil / IBGE, 2026.</span>
+          </li>
+          <li class="stat">
+            <p class="stat__number">87%</p>
+            <p class="stat__unit">só celular</p>
+            <p class="stat__text">Usuários das classes D e E que acessam a internet exclusivamente pelo celular.</p>
+            <span class="source">Fonte: TIC Domicílios 2025 (Cetic.br).</span>
+          </li>
+          <li class="stat">
+            <p class="stat__number">72,9%</p>
+            <p class="stat__unit">sem CNPJ</p>
+            <p class="stat__text">Trabalhadores por conta própria sem registro no CNPJ em 2025.</p>
+            <span class="source">Fonte: IBGE / PNAD Contínua.</span>
+          </li>
+        </ul>
+
+        <ul class="mini-stats" aria-label="Números de apoio">
+          <li class="mini-stat">
+            <p><strong>Mais de 60%</strong> dos donos de pequenos negócios pagam despesas da empresa com a conta pessoal.</p>
+            <span class="source">Fonte: CRC-SP / Sebrae.</span>
+          </li>
+          <li class="mini-stat">
+            <p><strong>39%</strong> dos brasileiros com celular ficaram sem pacote de dados ao menos uma vez em 3 meses.</p>
+            <span class="source">Fonte: Mobile Time, 2025.</span>
+          </li>
+          <li class="mini-stat">
+            <p>Cursos em microlearning chegam a cerca de <strong>82% de conclusão</strong>.</p>
+            <span class="source">Fonte: Senior, citando Shift e-Learning.</span>
+          </li>
+        </ul>
+
+        <p class="synthesis">O formato precisa ser <strong>curto, gratuito, prático e pensado para o celular</strong>, que caiba “enquanto o pão assa ou entre um cliente e outro”.</p>
+      </div>
+    </section>
+
+    <!-- ================= COMO FUNCIONA ================= -->
+    <section class="section" id="como-funciona" aria-labelledby="como-title">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="section-label">Como funciona</span>
+          <h2 class="section-title" id="como-title">Esqueça os cursos de 40 horas</h2>
+          <p class="section__lead">5 minutos por dia já organizam o seu caixa.</p>
+        </div>
+
+        <ol class="path" aria-label="Quatro passos">
+          <li class="path__step">
+            <span class="path__node" aria-hidden="true">01</span>
+            <div class="path__body">
+              <h3 class="path__title">Escolha</h3>
+              <p class="path__text">Selecione a trilha por ofício (barbearia, confeitaria, padaria e outros).</p>
+            </div>
+          </li>
+          <li class="path__step">
+            <span class="path__node" aria-hidden="true">02</span>
+            <div class="path__body">
+              <h3 class="path__title">Aprenda</h3>
+              <p class="path__text">Conclua uma microlição com quiz e desafio prático.</p>
+            </div>
+          </li>
+          <li class="path__step">
+            <span class="path__node" aria-hidden="true">03</span>
+            <div class="path__body">
+              <h3 class="path__title">Evolua</h3>
+              <p class="path__text">Acompanhe pontos, níveis e ofensiva diária de estudos.</p>
+            </div>
+          </li>
+          <li class="path__step">
+            <span class="path__node path__node--final" aria-hidden="true">04</span>
+            <div class="path__body">
+              <h3 class="path__title">Aplique</h3>
+              <p class="path__text">Use o aprendizado no negócio no mesmo dia.</p>
+            </div>
+          </li>
+        </ol>
+
+        <ul class="features" aria-label="Os 4 pilares da proposta">
+          <li class="card feature">
+            <p class="feature__kicker">5 minutos/dia</p>
+            <p class="card__text">Uma lição curta por dia, com quiz e desafio prático.</p>
+          </li>
+          <li class="card feature">
+            <p class="feature__kicker">Gratuito</p>
+            <p class="card__text">100% gratuito, sem exigir CNPJ nem escolaridade, financiado por doadores e cotas ESG.</p>
+          </li>
+          <li class="card feature">
+            <p class="feature__kicker">Por ofício</p>
+            <p class="card__text">Trilhas práticas por profissão, em app leve, pensado para celular e pouco consumo de dados.</p>
+          </li>
+          <li class="card feature">
+            <p class="feature__kicker">Gamificado</p>
+            <p class="card__text">Ofensiva diária, pontos, níveis e celebração de cada conquista.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= TRILHAS ================= -->
+    <section class="section section--claro" id="trilhas" aria-labelledby="trilhas-title">
+      <div class="container">
+        <div class="section__head">
+          <span class="section-label">Trilhas por ofício</span>
+          <h2 class="section-title" id="trilhas-title">Escolha a trilha do seu ofício</h2>
+          <p class="section__lead">Temas que cruzam todas as trilhas: gestão financeira, marketing digital, vendas e caixa.</p>
+        </div>
+
+        <ul class="tracks">
+          <li class="card track track--ativa">
+            <div class="track__top">
+              <span class="track__emoji" aria-hidden="true">✂️</span>
+              <span class="tag tag--marinho">Lição demo</span>
+            </div>
+            <h3 class="card__title">Barbearia e salões</h3>
+            <p class="card__text">Precificação de cortes (“Seu corte dá lucro?”), agenda e fidelização.</p>
+            <div class="progress track__progress" aria-hidden="true"><span class="progress__fill progress__fill--60"></span></div>
+            <a class="btn btn--primary btn--block" href="licao.html">Ver trilha</a>
+          </li>
+          <li class="card track">
+            <div class="track__top">
+              <span class="track__emoji" aria-hidden="true">🎂</span>
+              <span class="tag">Em breve</span>
+            </div>
+            <h3 class="card__title">Confeitaria</h3>
+            <p class="card__text">Margem de lucro da receita de bolo, custo por receita, controle de insumos.</p>
+            <div class="progress track__progress" aria-hidden="true"><span class="progress__fill progress__fill--30"></span></div>
+            <button class="btn btn--secondary btn--block" type="button" disabled>Ver trilha</button>
+          </li>
+          <li class="card track">
+            <div class="track__top">
+              <span class="track__emoji" aria-hidden="true">🥖</span>
+              <span class="tag">Em breve</span>
+            </div>
+            <h3 class="card__title">Padaria</h3>
+            <p class="card__text">Fluxo de caixa simples (separar as contas da padaria das contas de casa), controle de estoque.</p>
+            <div class="progress track__progress" aria-hidden="true"><span class="progress__fill progress__fill--15"></span></div>
+            <button class="btn btn--secondary btn--block" type="button" disabled>Ver trilha</button>
+          </li>
+          <li class="card track">
+            <div class="track__top">
+              <span class="track__emoji" aria-hidden="true">🧵</span>
+              <span class="tag">Em breve</span>
+            </div>
+            <h3 class="card__title">Costura</h3>
+            <p class="card__text"><span class="placeholder">[A DEFINIR: temas da trilha de costura]</span></p>
+            <div class="progress track__progress" aria-hidden="true"><span class="progress__fill progress__fill--0"></span></div>
+            <button class="btn btn--secondary btn--block" type="button" disabled>Ver trilha</button>
+          </li>
+          <li class="card track">
+            <div class="track__top">
+              <span class="track__emoji" aria-hidden="true">🛒</span>
+              <span class="tag">Em breve</span>
+            </div>
+            <h3 class="card__title">Pequeno comércio</h3>
+            <p class="card__text">Instagram para o bairro, precificação e vendas.</p>
+            <div class="progress track__progress" aria-hidden="true"><span class="progress__fill progress__fill--0"></span></div>
+            <button class="btn btn--secondary btn--block" type="button" disabled>Ver trilha</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= GAMIFICAÇÃO ================= -->
+    <section class="section" id="gamificacao" aria-labelledby="game-title">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="section-label">Gamificação</span>
+          <h2 class="section-title" id="game-title">Aprender vicia (do jeito bom)</h2>
+          <p class="section__lead">Ofensiva diária, pontos, níveis e ranking. Cada lição concluída é celebrada.</p>
+        </div>
+
+        <div class="game">
+          <!-- Ofensiva -->
+          <article class="card game__card game__streak">
+            <h3 class="game__title">Ofensiva diária <span aria-hidden="true">🔥</span></h3>
+            <div class="streak-hero">
+              <span class="streak-hero__flame" aria-hidden="true">🔥</span>
+              <p class="streak-hero__number">7</p>
+              <p class="streak-hero__label">dias seguidos</p>
+            </div>
+            <ol class="week" aria-label="Exemplo de semana com 7 dias de estudo">
+              <li class="week__day week__day--feito"><span class="visually-hidden">Segunda: lição feita</span><span aria-hidden="true">S</span></li>
+              <li class="week__day week__day--feito"><span class="visually-hidden">Terça: lição feita</span><span aria-hidden="true">T</span></li>
+              <li class="week__day week__day--feito"><span class="visually-hidden">Quarta: lição feita</span><span aria-hidden="true">Q</span></li>
+              <li class="week__day week__day--feito"><span class="visually-hidden">Quinta: lição feita</span><span aria-hidden="true">Q</span></li>
+              <li class="week__day week__day--feito"><span class="visually-hidden">Sexta: lição feita</span><span aria-hidden="true">S</span></li>
+              <li class="week__day week__day--feito"><span class="visually-hidden">Sábado: lição feita</span><span aria-hidden="true">S</span></li>
+              <li class="week__day week__day--feito"><span class="visually-hidden">Domingo: lição feita</span><span aria-hidden="true">D</span></li>
+            </ol>
+            <ul class="flames" aria-label="A chama cresce com os dias seguidos">
+              <li class="flames__item"><span class="flames__icon flames__icon--1" aria-hidden="true">🔥</span>1 dia</li>
+              <li class="flames__item"><span class="flames__icon flames__icon--7" aria-hidden="true">🔥</span>7 dias</li>
+              <li class="flames__item"><span class="flames__icon flames__icon--30" aria-hidden="true">🔥</span>30 dias</li>
+            </ul>
+          </article>
+
+          <!-- Ranking de exemplo -->
+          <article class="card game__card">
+            <div class="game__head">
+              <h3 class="game__title">Ranking da ofensiva</h3>
+              <span class="tag">Exemplo</span>
+            </div>
+            <ol class="ranking">
+              <li class="ranking__row ranking__row--voce">
+                <span class="ranking__pos">1º</span>
+                <span class="avatar avatar--voce" aria-hidden="true">VC</span>
+                <span class="ranking__name">Você</span>
+                <span class="ranking__score"><span aria-hidden="true">🔥</span>45</span>
+              </li>
+              <li class="ranking__row">
+                <span class="ranking__pos">2º</span>
+                <span class="avatar avatar--2" aria-hidden="true">A</span>
+                <span class="ranking__name">Ana</span>
+                <span class="ranking__score"><span aria-hidden="true">🔥</span>42</span>
+              </li>
+              <li class="ranking__row">
+                <span class="ranking__pos">3º</span>
+                <span class="avatar avatar--3" aria-hidden="true">L</span>
+                <span class="ranking__name">Léo</span>
+                <span class="ranking__score"><span aria-hidden="true">🔥</span>38</span>
+              </li>
+              <li class="ranking__row">
+                <span class="ranking__pos">4º</span>
+                <span class="avatar avatar--4" aria-hidden="true">B</span>
+                <span class="ranking__name">Bia</span>
+                <span class="ranking__score"><span aria-hidden="true">🔥</span>21</span>
+              </li>
+              <li class="ranking__row">
+                <span class="ranking__pos">5º</span>
+                <span class="avatar avatar--5" aria-hidden="true">C</span>
+                <span class="ranking__name">Caio</span>
+                <span class="ranking__score"><span aria-hidden="true">🔥</span>14</span>
+              </li>
+            </ol>
+          </article>
+
+          <!-- Conquistas + Conecte-se -->
+          <article class="card game__card">
+            <h3 class="game__title">Conquistas</h3>
+            <ul class="toasts">
+              <li class="toast"><span class="toast__icon" aria-hidden="true">⭐</span>Mais uma lição concluída!</li>
+              <li class="toast toast--laranja"><span class="toast__icon" aria-hidden="true">🔥</span>Ofensiva de 7 dias!</li>
+            </ul>
+
+            <div class="game__head game__head--spaced">
+              <h3 class="game__title">Conecte-se</h3>
+              <span class="tag">Exemplo</span>
+            </div>
+            <p class="card__text">Networking com outros jovens empreendedores.</p>
+            <ul class="people">
+              <li class="person"><span class="avatar avatar--1" aria-hidden="true">R</span><span class="person__name">Rafa</span><span class="person__trade">Lanches</span></li>
+              <li class="person"><span class="avatar avatar--2" aria-hidden="true">A</span><span class="person__name">Ana</span><span class="person__trade">Confeitaria</span></li>
+              <li class="person"><span class="avatar avatar--3" aria-hidden="true">L</span><span class="person__name">Léo</span><span class="person__trade">Barbearia</span></li>
+              <li class="person"><span class="avatar avatar--4" aria-hidden="true">D</span><span class="person__name">Duda</span><span class="person__trade">Estética</span></li>
+              <li class="person"><span class="avatar avatar--5" aria-hidden="true">C</span><span class="person__name">Caio</span><span class="person__trade">Moda</span></li>
+              <li class="person"><span class="avatar avatar--6" aria-hidden="true">B</span><span class="person__name">Bia</span><span class="person__trade">Padaria</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <ul class="perks" aria-label="Mais recursos do app">
+          <li class="perk"><span aria-hidden="true">⭐</span> Pontos e níveis</li>
+          <li class="perk"><span aria-hidden="true">🏅</span> Certificado por trilha</li>
+          <li class="perk"><span aria-hidden="true">🤝</span> Mentoria voluntária</li>
+          <li class="perk"><span aria-hidden="true">🧮</span> Calculadoras simples de preço e caixa</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DIFERENCIAL ================= -->
+    <section class="section section--claro" id="diferencial" aria-labelledby="dif-title">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="section-label">Diferencial</span>
+          <h2 class="section-title" id="dif-title">Por que é diferente</h2>
+        </div>
+
+        <div class="compare">
+          <article class="compare__col">
+            <h3 class="compare__title">Cursos tradicionais</h3>
+            <ul class="compare__list">
+              <li class="compare__item">Conteúdos extensos (3h a 120h)</li>
+              <li class="compare__item">Exigem tempo e disciplina de estudo</li>
+              <li class="compare__item">Conteúdo genérico</li>
+            </ul>
+          </article>
+          <article class="compare__col">
+            <h3 class="compare__title">Conteúdo avulso nas redes</h3>
+            <ul class="compare__list">
+              <li class="compare__item">Dicas rápidas soltas</li>
+              <li class="compare__item">Sem trilha nem acompanhamento de progresso</li>
+              <li class="compare__item">Qualidade irregular</li>
+            </ul>
+          </article>
+          <article class="compare__col compare__col--destaque">
+            <span class="compare__badge">Nossa proposta</span>
+            <h3 class="compare__title">App Conecta</h3>
+            <ul class="compare__list">
+              <li class="compare__item compare__item--ok">Lições de 5 min em trilhas</li>
+              <li class="compare__item compare__item--ok">Ofensiva diária e progresso</li>
+              <li class="compare__item compare__item--ok">Por ofício e prático</li>
+              <li class="compare__item compare__item--ok">100% gratuito</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="compare__note">Complementar, e não substituir, a formação de Sebrae, Senac e outras instituições.</p>
+      </div>
+    </section>
+
+    <!-- ================= VOLUNTÁRIOS ================= -->
+    <section class="section" id="voluntarios" aria-labelledby="vol-title">
+      <div class="container volunteers">
+        <div class="volunteers__copy">
+          <span class="section-label">Para voluntários</span>
+          <h2 class="section-title" id="vol-title">Seu conhecimento pode ser a oportunidade que alguém precisava para dar o próximo passo.</h2>
+          <p class="section__lead">Com 1 hora por semana, sua experiência vira lições que chegam a milhares de negócios da periferia.</p>
+
+          <div class="btn-row volunteers__cta">
+            <a class="btn btn--primary btn--lg" href="#voluntarios" data-placeholder-link>Quero ser voluntário</a>
+          </div>
+          <p class="volunteers__todo"><span class="placeholder">[A DEFINIR: link do formulário de voluntários]</span></p>
+        </div>
+
+        <div class="volunteers__cards">
+          <article class="card">
+            <span class="pill pill--num">01</span>
+            <h3 class="volunteers__h3">Quem pode</h3>
+            <p class="card__text">Profissionais experientes, especialistas em finanças e marketing, empreendedores, devs e UX designers.</p>
+          </article>
+          <article class="card">
+            <span class="pill pill--num">02</span>
+            <h3 class="volunteers__h3">O que você faz</h3>
+            <p class="card__text">Cria e revisa lições e quizzes, faz mentoria e ajuda a construir novas funcionalidades do app.</p>
+          </article>
+          <article class="card">
+            <span class="pill pill--num">03</span>
+            <h3 class="volunteers__h3">Quanto tempo</h3>
+            <p class="card__text">1 hora por semana. A mentoria é uma via de mão dupla de aprendizado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EMPRESAS (sem emoji) ================= -->
+    <section class="section section--marinho on-dark" id="empresas" aria-labelledby="esg-title">
+      <div class="container">
+        <div class="esg__head">
+          <div>
+            <span class="section-label">Empresas e investidores ESG</span>
+            <h2 class="section-title" id="esg-title">Seu investimento pode gerar mais do que impacto social.</h2>
+            <p class="section__lead">Pode desenvolver talentos, fortalecer negócios e criar oportunidades capazes de transformar um território.</p>
+          </div>
+          <img class="esg__logo" src="assets/img/logo-vertical-fundo-escuro.png" alt="Instituto Conecta" width="160" height="141" loading="lazy" decoding="async">
+        </div>
+
+        <ol class="esg-flow">
+          <li class="esg-step">
+            <span class="pill pill--num">01</span>
+            <h3 class="esg-step__title">Problema territorial</h3>
+            <p class="esg-step__text"><strong>72,9%</strong> dos trabalhadores por conta própria não têm CNPJ, e <strong>mais de 60%</strong> dos donos de pequenos negócios pagam despesas da empresa com a conta pessoal.</p>
+            <span class="source">Fontes: IBGE / PNAD Contínua; CRC-SP / Sebrae.</span>
+            <p class="esg-step__text"><strong>76%</strong> dos moradores de favela têm, tiveram ou pretendem ter um negócio próprio.</p>
+            <span class="source">Fonte: Data Favela / Locomotiva / Cufa.</span>
+          </li>
+          <li class="esg-step">
+            <span class="pill pill--num">02</span>
+            <h3 class="esg-step__title">O que fazemos</h3>
+            <p class="esg-step__text">Educação prática em lições de 5 minutos no celular, criadas e revisadas por voluntários. Patrocine trilhas temáticas, com métricas de conclusão e impacto acompanhadas em tempo real, alinhadas aos ODS 4, 8 e 10.</p>
+          </li>
+          <li class="esg-step">
+            <span class="pill pill--num">03</span>
+            <h3 class="esg-step__title">Impacto mensurável</h3>
+            <p class="esg-step__text">Patrocine uma trilha e acompanhe, em dados, quantos empreendedores concluíram e aplicaram cada lição.</p>
+            <ul class="kpi-list" aria-label="Indicadores que o parceiro acompanha">
+              <li>Lições concluídas</li>
+              <li>Taxa de conclusão</li>
+              <li>Alunos com ofensiva de 7 dias ou mais</li>
+              <li>Alunos ativos</li>
+              <li>Custo por aluno</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="esg-benefits">
+          <h3 class="esg-benefits__title"><span class="pill pill--num">04</span> Por que fazer parte</h3>
+          <ul class="benefits">
+            <li class="benefit"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Associação da marca a projetos de impacto social</li>
+            <li class="benefit"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Participação em eventos e encontros do Instituto</li>
+            <li class="benefit"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Aproximação com novos talentos e empreendedores</li>
+            <li class="benefit"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Participação em programas de mentoria e desenvolvimento</li>
+            <li class="benefit"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Relacionamento e networking</li>
+            <li class="benefit"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Reconhecimento institucional como parceiro da transformação social</li>
+            <li class="benefit"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Acesso a relatórios de impacto e resultados</li>
+            <li class="benefit"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Co-desenvolvimento de projetos de investimento social privado</li>
+          </ul>
+        </div>
+
+        <div class="esg__cta">
+          <p class="esg__quote">O Instituto Conecta é uma ponte entre capital, conhecimento e oportunidade.</p>
+          <a class="btn btn--primary btn--lg" href="#empresas" data-placeholder-link>Fale com o time ESG</a>
+          <p><span class="placeholder">[A DEFINIR: e-mail ou formulário de contato ESG]</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <div class="section__head">
+          <span class="section-label">Sobre o Instituto</span>
+          <h2 class="section-title" id="sobre-title">Conectar conhecimento. Fortalecer negócios.</h2>
+          <p class="section__lead">O Instituto Conecta é uma OSCIP (Organização da Sociedade Civil de Interesse Público) e edtech social sem fins lucrativos. Educação prática que transforma negócios e amplia oportunidades.</p>
+        </div>
+
+        <div class="about">
+          <article class="card about__card">
+            <h3 class="about__title">Missão</h3>
+            <p class="card__text">Capacitar jovens e pequenos empreendedores com educação prática e o conhecimento de voluntários.</p>
+          </article>
+          <article class="card about__card">
+            <h3 class="about__title">Visão</h3>
+            <p class="card__text">Tornar-se referência em educação comunitária e fortalecimento do empreendedorismo local.</p>
+          </article>
+          <article class="card about__card">
+            <h3 class="about__title">Valores</h3>
+            <ul class="pill-list about__values">
+              <li class="pill">Protagonismo</li>
+              <li class="pill">Educação prática</li>
+              <li class="pill">Linguagem humana</li>
+              <li class="pill">Oportunidades concretas</li>
+            </ul>
+          </article>
+          <article class="card about__card">
+            <h3 class="about__title">Sustentação</h3>
+            <p class="card__text">Doadores e empresas (cotas ESG e patrocínio de trilhas), mais voluntários que criam e revisam as lições.</p>
+          </article>
+        </div>
+
+        <h3 class="ods__heading">Alinhado aos Objetivos de Desenvolvimento Sustentável</h3>
+        <ul class="ods">
+          <li class="card ods__card">
+            <span class="ods__num">ODS 4</span>
+            <h4 class="ods__title">Educação de Qualidade</h4>
+            <p class="card__text">Capacitação profissional e empreendedora acessível.</p>
+          </li>
+          <li class="card ods__card">
+            <span class="ods__num">ODS 8</span>
+            <h4 class="ods__title">Trabalho Decente e Crescimento Econômico</h4>
+            <p class="card__text">Melhoria da gestão e fortalecimento da economia local.</p>
+          </li>
+          <li class="card ods__card">
+            <span class="ods__num">ODS 10</span>
+            <h4 class="ods__title">Redução das Desigualdades</h4>
+            <p class="card__text">Menos barreiras de acesso ao conhecimento e a oportunidades.</p>
+          </li>
+        </ul>
+
+        <div class="about__extra">
+          <article class="logo-meaning">
+            <img class="logo-meaning__img" src="assets/img/simbolo.png" alt="Símbolo do Instituto Conecta: dois elos entrelaçados, um azul-marinho e um laranja" width="160" height="103" loading="lazy" decoding="async">
+            <div>
+              <h3 class="about__title">O significado do logo</h3>
+              <p class="card__text">Dois elos entrelaçados representam a conexão entre quem empreende, quem ensina e quem apoia.</p>
+            </div>
+          </article>
+          <article class="card card--flat about__partners">
+            <h3 class="about__title">Junto com Sebrae, Senac e outros</h3>
+            <p class="card__text">Complementar, não substituir. O app é a porta de entrada diária e encaminha quem avança para cursos certificados, crédito e consultorias dessas instituições.</p>
+          </article>
+        </div>
+
+        <blockquote class="principle">
+          <p>Não comunicamos apenas problemas. Comunicamos possibilidades de transformação.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section--claro" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="section-label">Dúvidas</span>
+          <h2 class="section-title" id="faq-title">Perguntas frequentes</h2>
+        </div>
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__question">É grátis?</summary>
+            <p class="faq__answer">Sim, 100% gratuito. O projeto é financiado por doadores e empresas parceiras.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Preciso ter CNPJ?</summary>
+            <p class="faq__answer">Não. Também não é exigida escolaridade.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Gasta muitos dados?</summary>
+            <p class="faq__answer">O app é pensado para ser leve e funcionar bem no celular, mesmo com pouco pacote.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Quanto tempo por dia?</summary>
+            <p class="faq__answer">5 minutos, uma lição por dia, que dá pra fazer entre um cliente e outro.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Já posso baixar?</summary>
+            <p class="faq__answer">Ainda não. O app está em desenvolvimento, mas você já pode <a href="licao.html">experimentar uma lição aqui no site</a>.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Como apoio o projeto?</summary>
+            <p class="faq__answer">Como <a href="#voluntarios">voluntário</a> (1 hora por semana) ou como <a href="#empresas">empresa parceira</a>, patrocinando uma trilha.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA FINAL ================= -->
+    <section class="final-cta on-dark" aria-labelledby="final-title">
+      <div class="container final-cta__inner">
+        <span class="final-cta__flame" aria-hidden="true">🔥</span>
+        <h2 class="final-cta__title" id="final-title">Aprenda, conecte-se e suba no ranking.</h2>
+        <a class="btn btn--primary btn--lg" href="licao.html">Fazer minha primeira lição</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <img class="site-footer__logo" src="assets/img/logo-horizontal.png" alt="Instituto Conecta" width="160" height="45" loading="lazy" decoding="async">
+          <p class="site-footer__slogan">Conectar conhecimento. Fortalecer negócios.</p>
+          <p class="site-footer__tagline">Educação prática que transforma negócios e amplia oportunidades.</p>
+        </div>
+        <nav aria-label="Seções do site">
+          <p class="site-footer__title">Navegue</p>
+          <ul class="site-footer__links">
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#trilhas">Trilhas</a></li>
+            <li><a href="#voluntarios">Voluntários</a></li>
+            <li><a href="#empresas">Empresas</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="licao.html">Experimentar uma lição</a></li>
+            <li><a href="projeto.html">Bastidores do projeto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="site-footer__title">Redes</p>
+          <ul class="site-footer__links">
+            <li>Instagram: <span class="placeholder">[A DEFINIR: @ oficial, @institutoconecta ou @conectapp]</span></li>
+            <li>LinkedIn: <span class="placeholder">[A DEFINIR: página do LinkedIn]</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__strip">App Instituto Conecta • 5 min por dia • gratuito • no celular</p>
+        <p>Projeto Integrador A3 · Marketing de Conteúdo · 2026</p>
+        <p>Rankings e perfis exibidos são exemplos ilustrativos.</p>
+        <p>© <span data-year>2026</span> Instituto Conecta</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    No GitHub Pages, esta página é servida em QUALQUER endereço inexistente
+    (ex.: usuario.github.io/repo/a/b/c). Com caminhos relativos, o CSS quebraria
+    nesses endereços. O script abaixo cria uma <base> apontando para a raiz do
+    repositório antes de carregar os estilos. Fora do github.io não faz nada.
+  -->
+  <script>
+    (function () {
+      var segment = window.location.pathname.split('/')[1];
+      if (/\.github\.io$/.test(window.location.hostname) && segment && segment.indexOf('.') === -1) {
+        var base = document.createElement('base');
+        base.href = window.location.origin + '/' + segment + '/';
+        document.head.appendChild(base);
+      }
+    })();
+  </script>
+  <title>Página não encontrada | App Conecta</title>
+  <meta name="description" content="Essa página não existe. Volte para o início do App Conecta e continue sua ofensiva.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#042550">
+
+  <meta property="og:title" content="Página não encontrada | App Conecta">
+  <meta property="og:description" content="Essa página perdeu a ofensiva. Volte para o início.">
+  <meta property="og:image" content="assets/img/icone-512.png">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <main class="not-found">
+    <a class="not-found__logo" href="index.html">
+      <img src="assets/img/logo-horizontal.png" alt="Instituto Conecta, página inicial" width="160" height="45">
+    </a>
+
+    <!-- Elo do logo "solto": o elo laranja aberto, separado do marinho -->
+    <svg class="not-found__art" viewBox="0 0 320 200" aria-hidden="true">
+      <rect class="not-found__elo-marinho" x="40" y="50" width="100" height="100" rx="26" transform="rotate(45 90 100)"/>
+      <g class="not-found__elo-solto">
+        <rect class="not-found__elo-laranja" x="190" y="40" width="100" height="100" rx="26" transform="rotate(30 240 90)" stroke-dasharray="300 60"/>
+      </g>
+    </svg>
+
+    <p class="section-label">Erro 404</p>
+    <h1 class="not-found__title">Ops! Essa página perdeu a ofensiva.</h1>
+    <a class="btn btn--primary btn--lg" href="index.html">Voltar para o início</a>
+  </main>
+</body>
+</html>

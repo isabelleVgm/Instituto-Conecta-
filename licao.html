@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lição demo: Seu corte dá lucro? | App Conecta</title>
+  <meta name="description" content="Experimente uma lição do App Conecta: aprenda a calcular o preço do seu corte em 3 passos, em cerca de 5 minutos, com quiz e calculadora.">
+  <meta name="theme-color" content="#042550">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Instituto Conecta">
+  <meta property="og:title" content="Seu corte dá lucro? | Lição demo do App Conecta">
+  <meta property="og:description" content="Aprenda a calcular o preço do seu corte em 3 passos, em 5 minutos.">
+  <meta property="og:image" content="assets/img/icone-512.png">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/icone-192.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/licao.css">
+
+  <script type="module" src="js/licao.js"></script>
+</head>
+<body class="lesson-page">
+  <div class="lesson" data-lesson-root data-lesson="precificacao">
+    <header class="lesson-top">
+      <div class="lesson-top__inner">
+        <a class="lesson-top__close" href="index.html" aria-label="Sair da lição e voltar para o início">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </a>
+        <div class="progress progress--lg lesson-top__progress" role="progressbar" aria-label="Progresso da lição" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-progress>
+          <span class="progress__fill" data-progress-fill></span>
+        </div>
+        <span class="streak-chip" data-streak-chip aria-label="Ofensiva atual: 0 dias">
+          <span aria-hidden="true">🔥</span>
+          <span data-streak-value aria-hidden="true">0</span>
+        </span>
+      </div>
+    </header>
+
+    <main class="lesson-main" id="conteudo">
+      <h1 class="visually-hidden" data-lesson-title>Lição: Seu corte dá lucro?</h1>
+
+      <div class="lesson-stage" data-stage>
+        <noscript>
+          <section class="screen">
+            <h2 class="screen__title">Esta lição precisa de JavaScript</h2>
+            <p class="screen__text">A lição é interativa: tem quiz, feedback na hora e calculadora. Ative o JavaScript no seu navegador para jogar, ou volte e conheça o projeto.</p>
+            <p><a class="btn btn--primary btn--lg" href="index.html">Voltar para o início</a></p>
+          </section>
+        </noscript>
+      </div>
+    </main>
+
+    <footer class="lesson-footer" data-footer hidden>
+      <div class="lesson-footer__inner">
+        <div class="lesson-feedback" aria-live="polite" aria-atomic="true">
+          <div data-feedback hidden>
+            <p class="lesson-feedback__title" data-feedback-title></p>
+            <p class="lesson-feedback__text" data-feedback-text></p>
+          </div>
+        </div>
+        <div class="lesson-footer__actions">
+          <p class="lesson-footer__hint">Dica: use as teclas 1 a 4 e Enter</p>
+          <button class="btn btn--primary btn--lg lesson-footer__btn" type="button" data-action disabled>Verificar</button>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
