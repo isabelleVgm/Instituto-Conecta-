@@ -1,0 +1,494 @@
+/* =========================================================
+   COMPONENTES — botões 3D, cards, progresso, pílulas,
+   avatares, ofensiva, rótulos de seção (BEM)
+   ========================================================= */
+
+/* ---------- Marcador da marca (dois quadradinhos) ---------- */
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
+  color: var(--azul-marinho);
+}
+
+.brand-mark::before {
+  content: "";
+  width: 28px;
+  height: 12px;
+  flex-shrink: 0;
+  background:
+    linear-gradient(var(--laranja), var(--laranja)) left / 12px 12px no-repeat,
+    linear-gradient(var(--azul-marinho), var(--azul-marinho)) right / 12px 12px no-repeat;
+  border-radius: 2px;
+}
+
+.on-dark .brand-mark,
+.brand-mark--on-dark {
+  color: var(--branco);
+}
+
+.on-dark .brand-mark::before,
+.brand-mark--on-dark::before {
+  background:
+    linear-gradient(var(--laranja), var(--laranja)) left / 12px 12px no-repeat,
+    linear-gradient(var(--branco), var(--branco)) right / 12px 12px no-repeat;
+}
+
+/* ---------- Rótulo + título de seção ---------- */
+.section-label {
+  display: block;
+  margin-bottom: var(--sp-3);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--laranja-texto);
+}
+
+.on-dark .section-label {
+  color: var(--laranja);
+}
+
+.section-title {
+  font-size: var(--fs-2xl);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: var(--sp-4);
+  border-radius: 2px;
+  background: var(--laranja);
+}
+
+.section__head--center .section-title::after {
+  margin-inline: auto;
+}
+
+/* ---------- Botões 3D ---------- */
+.btn {
+  --btn-bg: var(--branco);
+  --btn-fg: var(--azul-marinho);
+  --btn-borda: var(--azul-claro-borda);
+  --btn-base: var(--azul-claro-borda);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 4px; /* reserva o espaço da "borda" 3D */
+  border: 2px solid var(--btn-borda);
+  border-radius: var(--raio-btn);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  box-shadow: 0 4px 0 var(--btn-base);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: transform var(--dur-rapida) var(--ease), box-shadow var(--dur-rapida) var(--ease), filter var(--dur-rapida);
+}
+
+.btn:hover {
+  filter: brightness(1.04);
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 var(--btn-base);
+}
+
+.btn--primary {
+  --btn-bg: var(--laranja);
+  --btn-fg: var(--azul-marinho);   /* branco sobre laranja reprova AA */
+  --btn-borda: var(--laranja);
+  --btn-base: var(--laranja-escuro);
+}
+
+.btn--secondary {
+  --btn-bg: var(--branco);
+  --btn-fg: var(--azul-marinho);
+  --btn-borda: var(--azul-claro-borda);
+  --btn-base: var(--azul-claro-borda);
+}
+
+.btn--marinho {
+  --btn-bg: var(--azul-marinho);
+  --btn-fg: var(--branco);
+  --btn-borda: var(--azul-marinho);
+  --btn-base: var(--marinho-escuro);
+}
+
+.btn--on-dark {
+  --btn-bg: transparent;
+  --btn-fg: var(--branco);
+  --btn-borda: var(--branco);
+  --btn-base: var(--branco);
+}
+
+.btn--sucesso {
+  --btn-bg: var(--sucesso);
+  --btn-fg: var(--branco);
+  --btn-borda: var(--sucesso);
+  --btn-base: var(--sucesso-escuro);
+}
+
+.btn--erro {
+  --btn-bg: var(--erro);
+  --btn-fg: var(--branco);
+  --btn-borda: var(--erro);
+  --btn-base: var(--erro-escuro);
+}
+
+.btn--sm {
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--fs-xs);
+}
+
+.btn--lg {
+  min-height: 3.5rem;
+  padding: 1rem 2rem;
+  font-size: var(--fs-base);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  --btn-bg: var(--azul-claro);
+  --btn-fg: var(--texto-suave);
+  --btn-borda: var(--azul-claro-borda);
+  --btn-base: var(--azul-claro-borda);
+  cursor: not-allowed;
+  filter: none;
+}
+
+.btn:disabled:active {
+  transform: none;
+  box-shadow: 0 4px 0 var(--btn-base);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--branco);
+  border: 2px solid var(--azul-claro-borda);
+  border-bottom-width: 4px;
+  border-radius: var(--raio-card);
+  padding: var(--sp-5);
+  box-shadow: var(--sombra-sm);
+}
+
+.card--flat {
+  box-shadow: none;
+}
+
+.card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform var(--dur-rapida) var(--ease), box-shadow var(--dur-rapida) var(--ease);
+}
+
+.card--link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-md);
+}
+
+.card__title {
+  font-size: var(--fs-lg);
+}
+
+.card__text {
+  margin-top: var(--sp-2);
+  color: var(--texto-suave);
+}
+
+/* ---------- Pílulas ---------- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--raio-pill);
+  border: 2px solid var(--azul-claro-borda);
+  background: var(--branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--azul-marinho);
+}
+
+.pill--laranja {
+  background: var(--laranja);
+  border-color: var(--laranja);
+}
+
+.pill--num {
+  justify-content: center;
+  min-width: 2.75rem;
+  padding: 0.3rem 0.7rem;
+  background: var(--laranja);
+  border-color: var(--laranja);
+  color: var(--azul-marinho);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.02em;
+}
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+/* Selo "em breve" / "exemplo" */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--raio-pill);
+  background: var(--azul-claro);
+  color: var(--texto-suave);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tag--marinho {
+  background: var(--azul-marinho);
+  color: var(--branco);
+}
+
+/* ---------- Barra de progresso ---------- */
+.progress {
+  position: relative;
+  height: 14px;
+  border-radius: var(--raio-pill);
+  background: var(--azul-claro);
+  overflow: hidden;
+}
+
+.progress--lg {
+  height: 16px;
+}
+
+.progress__fill {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: var(--progresso, 0%);
+  border-radius: inherit;
+  background: var(--laranja);
+  transition: width var(--dur) var(--ease);
+}
+
+/* Brilho no topo da barra (efeito "gamificado") */
+.progress__fill::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--branco);
+  opacity: 0.35;
+}
+
+/* Larguras fixas para barras decorativas (sem estilo inline no HTML) */
+.progress__fill--0 { width: 0%; }
+.progress__fill--15 { width: 15%; }
+.progress__fill--20 { width: 20%; }
+.progress__fill--30 { width: 30%; }
+.progress__fill--35 { width: 35%; }
+.progress__fill--60 { width: 60%; }
+.progress__fill--100 { width: 100%; }
+
+/* ---------- Avatares ---------- */
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: var(--fs-sm);
+  color: var(--azul-marinho);
+  background: var(--avatar-6);
+}
+
+.avatar--lg {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: var(--fs-base);
+}
+
+.avatar--1 { background: var(--avatar-1); }
+.avatar--2 { background: var(--avatar-2); }
+.avatar--3 { background: var(--avatar-3); }
+.avatar--4 { background: var(--avatar-4); }
+.avatar--5 { background: var(--avatar-5); }
+.avatar--6 { background: var(--avatar-6); }
+
+.avatar--voce {
+  background: var(--laranja);
+}
+
+/* ---------- Ofensiva (chama) ---------- */
+.streak-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--raio-pill);
+  background: var(--azul-claro);
+  border: 2px solid var(--azul-claro-borda);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: var(--fs-sm);
+  color: var(--azul-marinho);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.streak-chip--ativa {
+  background: var(--branco);
+  border-color: var(--laranja);
+}
+
+.btn .streak-chip {
+  padding: 0.1rem 0.5rem;
+  border: 0;
+  font-size: var(--fs-xs);
+  background: var(--branco);
+}
+
+/* ---------- Nota de fonte ---------- */
+.source {
+  display: block;
+  margin-top: var(--sp-3);
+  font-size: var(--fs-xs);
+  color: var(--texto-suave);
+  line-height: 1.4;
+}
+
+.on-dark .source {
+  color: var(--texto-sobre-marinho);
+}
+
+/* ---------- Ícones em SVG inline ---------- */
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--raio-sm);
+  background: var(--azul-claro);
+  color: var(--azul-marinho);
+}
+
+.on-dark .icon-box {
+  background: var(--marinho-card);
+  color: var(--laranja);
+}
+
+/* ---------- FAQ (details/summary) ---------- */
+.faq {
+  display: grid;
+  gap: var(--sp-3);
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.faq__item {
+  background: var(--branco);
+  border: 2px solid var(--azul-claro-borda);
+  border-bottom-width: 4px;
+  border-radius: var(--raio-card);
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-5);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: var(--fs-md);
+  cursor: pointer;
+  list-style: none;
+  border-radius: var(--raio-card);
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::after {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--azul-claro);
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform var(--dur) var(--ease);
+}
+
+.faq__item[open] .faq__question::after {
+  content: "−";
+  background: var(--laranja);
+}
+
+.faq__answer {
+  padding: 0 var(--sp-5) var(--sp-5);
+  color: var(--texto-suave);
+}

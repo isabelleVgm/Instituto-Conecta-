@@ -1,0 +1,89 @@
+/* =========================================================
+   TOKENS — App Conecta / Instituto Conecta
+   Toda cor do site sai daqui. Não use cor "solta" nos outros CSS.
+   ========================================================= */
+
+:root {
+  /* ---------- Paleta oficial ---------- */
+  --azul-marinho: #042550;    /* estrutura, títulos, texto, fundos escuros */
+  --laranja: #FF6412;         /* SÓ destaque: CTA, ofensiva, progresso */
+  --branco: #FFFFFF;
+  --azul-claro: #E6EFF7;      /* fundos de seção e cards secundários */
+  --laranja-escuro: #C94A06;  /* borda inferior dos botões 3D */
+  --marinho-escuro: #021A3A;
+  --azul-claro-borda: #C9D9EA;
+  --texto-suave: #4A5B78;
+  --sucesso: #1A7F4B; --sucesso-fundo: #E3F5EC;   /* só no feedback do quiz */
+  --erro: #B42318;    --erro-fundo: #FDECEA;      /* só no feedback do quiz */
+
+  /* ---------- Derivados por acessibilidade ----------
+     #FF6412 como texto pequeno em fundo claro reprova no WCAG AA.
+     --laranja-texto passa AA no branco (5,5:1) e no azul-claro (4,7:1). */
+  --laranja-texto: #B84300;
+  --sucesso-escuro: #10593A;  /* borda inferior do botão de acerto */
+  --erro-escuro: #7F1810;     /* borda inferior do botão de erro */
+  --texto-sobre-marinho: #B8C7DA; /* texto secundário em fundo marinho (8,8:1) */
+  --linha-sobre-marinho: #1C3D69; /* bordas em fundo marinho */
+  --marinho-card: #0A3366;    /* cards dentro de seções marinho */
+
+  /* Avatares fictícios: únicas cores "extras" permitidas */
+  --avatar-1: #FFE0CC;
+  --avatar-2: #D7E8FF;
+  --avatar-3: #DDF2E6;
+  --avatar-4: #F1E1F6;
+  --avatar-5: #FFF0C2;
+  --avatar-6: #E6EFF7;
+
+  /* Sombras (marinho com transparência) */
+  --sombra-sm: 0 2px 6px rgba(4, 37, 80, 0.08);
+  --sombra-md: 0 8px 24px rgba(4, 37, 80, 0.10);
+  --sombra-lg: 0 20px 48px rgba(4, 37, 80, 0.16);
+  --veu: rgba(2, 26, 58, 0.45);
+
+  /* ---------- Tipografia ---------- */
+  --fonte-titulo: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fonte-corpo: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --fs-xs: 0.8125rem;                                  /* 13px: fontes, notas */
+  --fs-sm: 0.875rem;                                   /* 14px: rótulos */
+  --fs-base: 1rem;                                     /* 16px: corpo mínimo */
+  --fs-md: 1.125rem;                                   /* 18px */
+  --fs-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-xl: clamp(1.5rem, 1.2rem + 1.3vw, 2.25rem);
+  --fs-2xl: clamp(1.75rem, 1.3rem + 2.1vw, 3rem);
+  --fs-numero: clamp(2.5rem, 2rem + 2.4vw, 3.75rem);
+
+  /* ---------- Espaçamentos ---------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --secao-py: clamp(3.5rem, 2.5rem + 4vw, 6.5rem);
+  --gutter: 1rem;
+  --largura-max: 72rem;
+
+  /* ---------- Raios ---------- */
+  --raio-sm: 0.625rem;
+  --raio-btn: 0.9375rem;   /* 15px */
+  --raio-card: 1.125rem;   /* 18px */
+  --raio-pill: 999px;
+
+  /* ---------- Movimento ---------- */
+  --dur-rapida: 150ms;
+  --dur: 250ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --header-h: 4rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 1.5rem;
+    --header-h: 4.5rem;
+  }
+}
